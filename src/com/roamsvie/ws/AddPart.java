@@ -1,6 +1,7 @@
 package com.roamsvie.ws;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -38,28 +39,39 @@ public class AddPart
         {
             if (!part.exists())
             {
-                createFile(part);
+                createFile(part, p, fileNum);
                 break;
             }
             else
             {
                 fileNum++;
                 fileName = "Part" + fileNum;
-                part.renameTo(new File(dir, fileName+".txt"));
+                part = new File(dir, fileName+".txt");
             }
         }while (fileNum <= fileLimit);
     }
 
-    public void createFile(File part)
+    public void createFile(File part, Part Part, int fileNum)
     {
+        PartList pl = new PartList();
         try
         {
             part.createNewFile();
-        } catch (IOException e)
+            try(FileWriter writer = new FileWriter(part))
+            {
+                String append = "\n";
+                String info = "Name: " +Part.getName() +append +"Link: " +Part.getLink() +append +"Base price: " +Part.getPrice() +append +append
+                        +"Date" +"\t\t\t" +"Price";
+                writer.write(info);
+                writer.flush();
+                System.out.println("File created successfully!");
+                pl.addToList(fileNum, Part);
+            }
+        }
+        catch (IOException e)
         {
             e.printStackTrace();
         }
+        pl.getList(part);
     }
-
-
 }

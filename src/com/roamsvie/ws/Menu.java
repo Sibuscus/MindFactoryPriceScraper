@@ -3,6 +3,7 @@ package com.roamsvie.ws;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.IOException;
@@ -131,27 +132,47 @@ public class Menu
 
     public Part linkChecker(String url)
     {
-        String title = null;
-        String rawPrice, tempPrice;
         double price = 0;
+        String title = null;
+        String query = "div.pprice";
 
         try
         {
             final Document page = Jsoup.connect(url).get();
             title = page.title();
-            for(Element row : page.select("span.specialPriceText"))
-            {
-                rawPrice = row.text();
 
-                tempPrice = rawPrice.replace(",", ".").replaceAll("[^\\d.]", "");
-
-                price = Double.parseDouble(tempPrice);
-            }
+            price = queryChecker(page, query);
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
         return new Part(title, url, price);
+    }
+    private double queryChecker(Document page, String query)
+    {
+        String rawPrice, tempPrice;
+        double price = 0;
+
+        for(Element row : page.select(query))
+        {
+            rawPrice = row.text();
+
+            rawPrice = filter(rawPrice);
+
+            tempPrice = rawPrice.replace(",", ".").replaceAll("[^\\d.]", "");
+
+            price = Double.parseDouble(tempPrice);
+            if(price > 0)
+            {
+                break;
+            }
+        }
+        return price;
+    }
+    private String filter(String rawPrice)
+    {
+        String[] array = rawPrice.split(" ");
+        return array[2];
     }
 }

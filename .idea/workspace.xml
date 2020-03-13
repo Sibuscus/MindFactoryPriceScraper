@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c96f1102-bcee-40a1-8bac-edaceac65672" name="Default Changelist" comment="" />
+    <list default="true" id="c96f1102-bcee-40a1-8bac-edaceac65672" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sime_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/AddPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/AddPart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/roamsvie/ws/AddPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/roamsvie/ws/AddPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/roamsvie/ws/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/roamsvie/ws/Menu.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +26,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Z2SmZK2ghrunGGqmyUPHwk3m5n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jsoup-1.13.1.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -69,5 +84,18 @@
       <updated>1584035855347</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
