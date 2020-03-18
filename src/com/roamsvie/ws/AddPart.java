@@ -66,6 +66,7 @@ public class AddPart
                         +"Date" +"\t\t\t" +"Price";
                 writer.write(info);
                 writer.flush();
+                writer.close();
                 System.out.println("File created successfully!");
                 list.put(fileNum, Part.getName());
             }

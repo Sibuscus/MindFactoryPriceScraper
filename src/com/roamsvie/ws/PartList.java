@@ -29,7 +29,7 @@ public class PartList
         //Loop to fill up the map
         for(File file : fileList)
         {
-            try
+            try //MAKE IT TO FILL UP AN OBJECT AND THEN A MAP, to read prices easier
             {
                 Scanner reader = new Scanner(file);
 
@@ -39,6 +39,7 @@ public class PartList
                 temp2 = reader.nextLine();
                 tempValue = temp2.substring(6);
                 tempList.put(tempKey, tempValue);
+                reader.close();
             }
             catch (IOException e)
             {
@@ -50,13 +51,15 @@ public class PartList
         return tempList;
     }
 
-    public void listWork(Map<Integer, String> list)
+    public boolean listWork(Map<Integer, String> list)
     {
         String value;
+        boolean isEmpty;
 
         //Iterate through map to print out the parts
         if(!list.isEmpty())
         {
+            isEmpty = false;
             System.out.println("Your list: ");
             for (Integer key : list.keySet())
             {
@@ -68,13 +71,15 @@ public class PartList
         }
         else
         {
+            isEmpty = true;
             System.out.println("Your list is empty!");
         }
+        return isEmpty;
     }
 
 
     //FILLS an File array with "Part" file names in them
-    private File[] getFileList(String dir)
+    public File[] getFileList(String dir)
     {
         File dirF = new File(dir);
 

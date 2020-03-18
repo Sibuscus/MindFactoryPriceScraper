@@ -36,14 +36,17 @@ public class Menu
 
     private static void FilePath()
     {
-        String path;
+        String path, baseFileDirString = null;
         Integer choice;
 
         Scanner s = new Scanner(System.in);
         Map<Integer, String> list;
 
         AddPart ap = new AddPart();
+        RemovePart rp = new RemovePart();
+
         PartList pl = new PartList();
+
 
         System.out.println("Example: D:\\Development\\GitHub\\WebScraper\\parts.txt");
         System.out.print("Specify the base PARTS's file path:");
@@ -61,6 +64,18 @@ public class Menu
         }
         baseFile = path;
         list = pl.listWork(new File(baseFile));
+
+        File baseFileDir = new File(baseFile);
+        baseFileDir = baseFileDir.getParentFile();
+        try
+        {
+            baseFileDirString = baseFileDir.getCanonicalPath();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
 
         do
         {
@@ -85,7 +100,7 @@ public class Menu
                     ap.addPart(list);
                     break;
                 case 3:
-
+                    rp.removePart(list, baseFileDirString);
                     break;
                 case 4:
 

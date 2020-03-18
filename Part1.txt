@@ -1,5 +1,5 @@
-Name: AMD Ryzen 5 3600 6x 3.60GHz So.AM4 BOX - Sockel AM4 | Mindfactory.de
-Link: https://www.mindfactory.de/product_info.php/AMD-Ryzen-5-3600-6x-3-60GHz-So-AM4-BOX_1313643.html 
-Base price: 169.0
+Name: 8GB KFA2 GeForce RTX 2080 SUPER EX 8GB 256-bit GDDR6 - RTX 2080 | Mindfactory.de
+Link: https://www.mindfactory.de/product_info.php/8GB-KFA2-GeForce-RTX-2080-SUPER-EX-8GB-256-bit-GDDR6_1320354.html 
+Base price: 719.0
 
 Date			Price
