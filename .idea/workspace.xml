@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96f1102-bcee-40a1-8bac-edaceac65672" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sime_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/AddPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/AddPart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/PartList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/PartList$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/PartList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WebScraper/com/roamsvie/ws/PartList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/roamsvie/ws/AddPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/roamsvie/ws/AddPart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/roamsvie/ws/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/roamsvie/ws/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/roamsvie/ws/PartList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/roamsvie/ws/PartList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

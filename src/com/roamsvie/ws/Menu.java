@@ -7,9 +7,7 @@ import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 import static java.lang.System.exit;
 
@@ -42,9 +40,10 @@ public class Menu
         Integer choice;
 
         Scanner s = new Scanner(System.in);
-        List<String[]> partsList = new ArrayList<>();
+        Map<Integer, String> list;
 
         AddPart ap = new AddPart();
+        PartList pl = new PartList();
 
         System.out.println("Example: D:\\Development\\GitHub\\WebScraper\\parts.txt");
         System.out.print("Specify the base PARTS's file path:");
@@ -57,11 +56,11 @@ public class Menu
             path = s.nextLine();
             if(path.equals("0"))
             {
-                exit(0);
+                exit(1);
             }
         }
-        baseFile = path.toString();
-        File parts = new File(path);
+        baseFile = path;
+        list = pl.listWork(new File(baseFile));
 
         do
         {
@@ -80,10 +79,10 @@ public class Menu
             switch (choice)
             {
                 case 1:
-
+                    pl.listWork(list);
                     break;
                 case 2:
-                    ap.addPart();
+                    ap.addPart(list);
                     break;
                 case 3:
 
@@ -149,6 +148,7 @@ public class Menu
         }
         return new Part(title, url, price);
     }
+
     private double queryChecker(Document page, String query)
     {
         String rawPrice, tempPrice;

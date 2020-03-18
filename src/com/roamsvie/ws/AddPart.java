@@ -3,6 +3,7 @@ package com.roamsvie.ws;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Scanner;
 
 public class AddPart
@@ -10,7 +11,7 @@ public class AddPart
     public static int fileNum = 0;
     public static int fileLimit = 20;
 
-    public void addPart()
+    public void addPart(Map<Integer, String> list)
     {
         String url;
 
@@ -39,7 +40,8 @@ public class AddPart
         {
             if (!part.exists())
             {
-                createFile(part, p, fileNum);
+                createFile(part, p, fileNum, list);
+
                 break;
             }
             else
@@ -51,7 +53,7 @@ public class AddPart
         }while (fileNum <= fileLimit);
     }
 
-    public void createFile(File part, Part Part, int fileNum)
+    public void createFile(File part, Part Part, int fileNum, Map<Integer, String> list)
     {
         PartList pl = new PartList();
         try
@@ -65,13 +67,12 @@ public class AddPart
                 writer.write(info);
                 writer.flush();
                 System.out.println("File created successfully!");
-                pl.addToList(fileNum, Part);
+                list.put(fileNum, Part.getName());
             }
         }
         catch (IOException e)
         {
             e.printStackTrace();
         }
-        pl.getList(part);
     }
 }

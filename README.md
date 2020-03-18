@@ -1,4 +1,4 @@
-# MindFactory WebScraper
+# MindFactory WebScraper (PRE-ALPHA)
 
 A WebScraper made in java for MindFactory.de to follow parts prices history and changes from the current moment it's installed and so forth.
 README.md is not final and subject to major changes in the future. Note that the current version of the program is jsut a prototype.
@@ -49,7 +49,7 @@ The format of the file is as such:
 
 
 ### Ideas for the future:
-- Make price history readings from the application directly
+- Make price history readings from files in the application directly (No need for the user to open the file manually to view the history, instead from the application
 - Use WaybackMachine to get price history
 
 
